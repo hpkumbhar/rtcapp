@@ -13,7 +13,8 @@ window.onload=function(){
         console.log("localbtn clicked")
      // document.getElementById("localbtn").setAttribute("disabled",true);
        // document.getElementById("remotebtn").setAttribute("disabled",true);
-         document.getElementById("remotebtn2").removeAttribute("disabled",true);
+       //  document.getElementById("remotebtn2").removeAttribute("disabled",true);
+        //document.getElementById("remotebtn2").setAttribute("disabled",true);
       });
 
  document.getElementById("remotebtn").addEventListener("click",function(){
