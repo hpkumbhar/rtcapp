@@ -11,21 +11,21 @@ window.onload=function(){
       document.getElementById("localbtn").addEventListener("click", function(){
         offerCreate();
         console.log("localbtn clicked")
-      document.getElementById("localbtn").setAttribute("disabled",true);
-        document.getElementById("remotebtn").setAttribute("disabled",true);
-          document.getElementById("remotebtn2").removeAttribute("disabled",true);
+     // document.getElementById("localbtn").setAttribute("disabled",true);
+       // document.getElementById("remotebtn").setAttribute("disabled",true);
+       //   document.getElementById("remotebtn2").removeAttribute("disabled",true);
       });
 
  document.getElementById("remotebtn").addEventListener("click",function(){
    answerCreate(new RTCSessionDescription(JSON.parse(document.getElementById("remote").value)));
-   document.getElementById("localbtn").setAttribute("disabled",true);
-     document.getElementById("remotebtn").setAttribute("disabled",true);
-       document.getElementById("remotebtn2").setAttribute("disabled",true);
+ //  document.getElementById("localbtn").setAttribute("disabled",true);
+    // document.getElementById("remotebtn").setAttribute("disabled",true);
+    //   document.getElementById("remotebtn2").setAttribute("disabled",true);
  });
 
  document.getElementById("remotebtn2").addEventListener("click",function(){
    answerGet(new RTCSessionDescription(JSON.parse(document.getElementById("remote").value)));
-   document.getElementById("remotebtn2").setAttribute("disabled",true);
+ //  document.getElementById("remotebtn2").setAttribute("disabled",true);
  });
  document.getElementById("msgbtn").addEventListener("click",function(){
        msgSend(document.getElementById("msg").value);
