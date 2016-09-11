@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <title>webrtc chat lab</title>
+  <link rel="icon" href="favicon.png" type="image/png" sizes="">
+
+  <meta content="text/html; charset=us-ascii" http-equiv="Content-Type">
+  <meta content="en-us" http-equiv="Content-Language">
+<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="adapter.js"></script>
+
+<script type="text/javascript" src="new.js"></script>
+</head>
+
+<body style="PADDING-BOTTOM: 100px; PADDING-LEFT: 100px; PADDING-RIGHT: 100px; BACKGROUND: url(images.jpg); PADDING-TOP: 100px" onload="" align="center">
+  <h3>Server-less Chat</h3>
+
+  <p>Name&nbsp;&nbsp; &nbsp;<input readonly="true"  id="idname">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Another Name&nbsp;&nbsp; &nbsp;<input readonly="true" id="othername"></p>
+
+  <p>Local Description<br>
+  <textarea style="BACKGROUND-COLOR: #cccccc; WIDTH: 543px; HEIGHT: 55px" id="local" rows="3" cols="63" readonly>
+</textarea></p>
+
+  <p><button id="localbtn">offer</button><br>
+  <br>
+  Remote Description<br>
+  <textarea style="WIDTH: 543px; HEIGHT: 60px" id="remote" rows="3" cols="63">
+</textarea></p>
+
+  <p><button id="remotebtn">create answer</button>&nbsp;<button id="remotebtn2" disabled>get answer</button><br>
+  &nbsp;<br>
+  <textarea style="WIDTH: 543px;  resize: none;"  readonly="readonly"id="onmsg" rows="6" cols="60">
+</textarea><br>
+  <br></p>
+
+  <p><input style="WIDTH: 485px; HEIGHT: 21px" id="msg"> &nbsp;<button id="msgbtn">send</button></p><script type="text/javascript">
+</script>
+</body>
+</html>
