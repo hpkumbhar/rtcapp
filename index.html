@@ -1,1 +1,140 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head>    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />    <meta name="description" content="Serverless Chat, Webrtc, javascript" />    <meta name="author" content="Hemant Kumbhar" />    <!--[if IE]>        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">        <![endif]-->  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="">    <title>Webrtc Chat Lab</title>    <!-- BOOTSTRAP CORE STYLE CSS -->    <link href="assets/css/bootstrap.css" rel="stylesheet" />  <!--  <script src="assets/js/new.js" type="text/javascript"></script> -->    <script src="assets/js/new.js" type="text/javascript"></script>    <script src="assets/js/adapter.js" type="text/javascript"></script></head><body style="font-family:Verdana" onload="document.getElementById('dialog').style.display = 'block';">  <div class="container" id="container" style=" display:none"><div class="row " style="padding-top:40px;">    <h3 class="text-center" >Serverless Chat </h3>    <br /><br />    <div class="col-md-4">          <div class="panel panel-primary">            <div class="panel-heading">               ONLINE USERS            </div>            <div class="panel-body">                <ul class="media-list">                      <div class="media">                                  <a class="pull-left" href="#">                                    <img class="media-object img-circle" style="max-height:40px;" src="assets/img/user.png" />                                      </a>                                        <div class="media-body" >                                        <h5  readonly="true" ><lable id="yourname"></lable> | You </h5>                                   <small class="text-muted"><lable id="mytime"></small>                                </div>                            </div>                    <li class="media">                        <div class="media-body">                            <div class="media">                                  <a class="pull-left" href="#">                                    <img class="media-object img-circle" style="max-height:40px;" src="assets/img/user.png" />                                      </a>                                        <div class="media-body" >                                        <h5  readonly="true" ><lable id="othername"></lable> | User </h5>                                   <small class="text-muted"><lable id="othertime"></lable></small>                                </div>                            </div>                          </div>                        </li>                      </ul>                  </div>                </div>              </div>    <div class="col-md-8">        <div class="panel panel-info">            <div class="panel-heading">                RECENT CHAT HISTORY            </div>            <div class="panel-body" style="height:400px; overflow-y: scroll" id="onmsg" >            </div>            <div class="panel-footer">                <div class="input-group">                  <input type="text" class="form-control" id="msg" placeholder="Enter Message" />                  <span class="input-group-btn">                    <button class="btn btn-info" id="msgbtn" type="button">SEND</button>                    </span>                  </div>            </div>        </div>    </div></div>  </div>    <div class="dig " id="dialog" style="" align="justify" >      <div class="" style= "position:center;"  >                      <div class="panel panel-primary" >                        <div class="panel-heading">CONNCECTION</div>                        <div class="panel-body" >                          <div>                            <h5 style="float: left">Your Id</h5>                            <input type="text" id="idname" class="form-control" placeholder="Your Id" />                            </div>                            <br>                          <h5>Local Description </h5>                          <br>                          <div class="input-group">                            <input type="text" id="local" class="form-control" placeholder="Get Local Description" /> <!--                            <textarea type="text" cols="1" id="local" class="form-control" placeholder="Get Local Description" ></textarea>-->                            <span class="input-group-btn">                              <button class="btn btn-info" id="localbtn" type="button">Create</button>                              </span>                            </div>                            <br>                            <h5>Remote Description </h5><br>                            <div class="input-group ">                                <input type="text" id="remote" multiple class="form-control" placeholder="Get Remote Description"/>                                  <span class="input-group-btn ">                                  <button class="btn btn-info" id="remotebtn2" type="button">Connect</button>                                </span>                              </div>                                <br>                              </div>                        </div>                      </div>                    </div>                  </div>  </div><style></style></body></html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Serverless Chat, Webrtc, javascript" />
+    <meta name="author" content="Hemant Kumbhar" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="">
+    <title>Webrtc Chat Lab</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+  <!--  <script src="assets/js/new.js" type="text/javascript"></script> -->
+    <script src="assets/js/new.js" type="text/javascript"></script>
+    <script src="assets/js/adapter.js" type="text/javascript"></script>
+
+
+
+</head>
+<body style="font-family:Verdana" onload="document.getElementById('dialog').style.display = 'block';">
+  <div class="container" id="container" style=" display:none">
+<div class="row " style="padding-top:40px;">
+    <h3 class="text-center" >Serverless Chat </h3>
+    <br /><br />
+    <div class="col-md-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+               ONLINE USERS
+            </div>
+            <div class="panel-body">
+                <ul class="media-list">
+                      <div class="media">
+                                  <a class="pull-left" href="#">
+                                    <img class="media-object img-circle" style="max-height:40px;" src="assets/img/user.png" />
+                                      </a>
+                                        <div class="media-body" >
+                                        <h5  readonly="true" ><lable id="yourname"></lable> | You </h5>
+                                   <small class="text-muted"><lable id="mytime"></small>
+                                </div>
+                            </div>
+
+                    <li class="media">
+                        <div class="media-body">
+                            <div class="media">
+                                  <a class="pull-left" href="#">
+                                    <img class="media-object img-circle" style="max-height:40px;" src="assets/img/user.png" />
+                                      </a>
+                                        <div class="media-body" >
+                                        <h5  readonly="true" ><lable id="othername"></lable> | User </h5>
+                                   <small class="text-muted"><lable id="othertime"></lable></small>
+                                </div>
+                            </div>
+
+
+
+                          </div>
+                        </li>
+
+                      </ul>
+                  </div>
+                </div>
+              </div>
+
+
+
+    <div class="col-md-8">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                RECENT CHAT HISTORY
+            </div>
+
+            <div class="panel-body" style="height:400px; overflow-y: scroll" id="onmsg" >
+
+            </div>
+
+            <div class="panel-footer">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="msg" placeholder="Enter Message" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-info" id="msgbtn" type="button">SEND</button>
+                    </span>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+  </div>
+
+
+    <div class="dig " id="dialog" style="" align="justify" >
+      <div class="" style= "position:center;"  >
+                      <div class="panel panel-primary" >
+                        <div class="panel-heading">CONNCECTION</div>
+                        <div class="panel-body" >
+
+                          <div>
+                            <h5 style="float: left">Your Id</h5>
+                            <input type="text"  disabled id="idname" class="form-control" placeholder="Your Id" />
+                            </div>
+                            <br>
+
+                          <h5>Local Description </h5>
+                          <br>
+                          <div class="input-group">
+                            <input type="text" id="local" class="form-control" placeholder="Get Local Description" /> <!--
+                            <textarea type="text" cols="1" id="local" class="form-control" placeholder="Get Local Description" ></textarea>-->
+                            <span class="input-group-btn">
+                              <button class="btn btn-info" id="localbtn" type="button">Create</button>
+                              </span>
+                            </div>
+                            <br>
+
+                            <h5>Remote Description </h5><br>
+                            <div class="input-group ">
+                                <input type="text" id="remote" multiple class="form-control" placeholder="Get Remote Description"/>
+                                  <span class="input-group-btn ">
+                                  <button class="btn btn-info" id="remotebtn2" type="button">Connect</button>
+                                </span>
+                              </div>
+                                <br>
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+  </div>
+
+<style>
+
+
+</style>
+
+</body>
+</html>
