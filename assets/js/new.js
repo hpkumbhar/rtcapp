@@ -9,6 +9,7 @@ window.onload=function(){
    init()
 
    document.getElementById('idname').value=myid;
+     document.getElementById("idname").setAttribute("disabled",true);
      document.getElementById('yourname').innerHTML=myid;
      document.getElementById('mytime').innerHTML= new Date().toLocaleString();
 
