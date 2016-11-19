@@ -7,6 +7,9 @@ var anothernametime;
 var myid=Math.floor(Math.random()*10000);
 window.onload=function(){
    init()
+   document.oncontextmenu=function(){
+      return false;
+         }
 
    document.getElementById('idname').value=myid;
      document.getElementById("idname").setAttribute("disabled",true);
