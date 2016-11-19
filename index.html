@@ -18,7 +18,7 @@
 
 
 </head>
-<body style="font-family:Verdana" onload="document.getElementById('dialog').style.display = 'block';" oncontextmenu="return false;">
+<body style="font-family:Verdana" onload="document.getElementById('dialog').style.display = 'block';" >
   <div class="container" id="container" style=" display:none">
 <div class="row " style="padding-top:40px;">
     <h3 class="text-center" >Serverless Chat </h3>
@@ -135,6 +135,10 @@
 
 
 </style>
-
+    <script>
+    document.oncontextmenu = function() {
+    return false;
+}
+    </script>
 </body>
 </html>
